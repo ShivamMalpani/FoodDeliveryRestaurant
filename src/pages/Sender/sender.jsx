@@ -27,7 +27,7 @@ import {
     Image
 } from '@chakra-ui/react'
 import Footer from "../../Footer/footer";
-import Header from "../../Header/header";
+import Header from "../../Header/Header";
 
 
 const Sender = () => {

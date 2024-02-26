@@ -24,7 +24,7 @@ import {
 } from '@chakra-ui/react';
 import { IconButton } from '@chakra-ui/react';
 import { EditIcon, DeleteIcon, ViewIcon } from '@chakra-ui/icons';
-import Header from '../../Header/header';
+import Header from "../../Header/Header";
 import Footer from '../../Footer/footer';
 import Pagination from '../Pagination/pagination';
 import FoodBackgroundImage from '../../img4.jpg';

@@ -31,7 +31,7 @@ import { EditIcon, DeleteIcon, ViewIcon } from '@chakra-ui/icons';
 import { IconButton } from '@chakra-ui/react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Footer from "../../Footer/footer";
-import Header from "../../Header/header";
+import Header from "../../Header/Header";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
 import FoodBackgroundImage from '../../img4.jpg';

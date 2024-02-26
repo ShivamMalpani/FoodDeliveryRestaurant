@@ -12,7 +12,7 @@ import {
     Text
 } from '@chakra-ui/react'
 import Congrats from "../Congrats.png"
-import Header from "../Header/header";
+import Header from "../Header/Header";
 import Footer from "../Footer/footer";
 
 const Verified = () => {

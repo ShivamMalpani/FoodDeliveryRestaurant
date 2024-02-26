@@ -1,7 +1,7 @@
 import react, { useState, useEffect } from "react"
 import { Flex, useToast, useColorModeValue, Image, Text, Box, Stack } from "@chakra-ui/react";
 import axios from "axios";
-import Header from "../Header/header";
+import Header from "../Header/Header";
 import Footer from "../Footer/footer";
 import verifyemail from "../verifyemail.png"
 import FoodBackgroundImage from '../img2.jpg';

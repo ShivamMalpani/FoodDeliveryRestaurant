@@ -22,7 +22,7 @@ import {
     Badge,
     Spinner
 } from '@chakra-ui/react';
-import Header from '../../Header/header';
+import Header from "../../Header/Header";
 import Footer from '../../Footer/footer';
 import Pagination from '../Pagination/pagination';
 import axios from "axios"
@@ -211,6 +211,7 @@ const NewOrders = () => {
     const indexOfLastGroupOrder = (currentgroupPage + 1) * groupordersPerPage;
     const indexOfFirstGroupOrder = indexOfLastGroupOrder - groupordersPerPage;
     const currentGroupOrders = grouporders.slice(indexOfFirstGroupOrder, indexOfLastGroupOrder);
+    const [modalflag, setModalFlag] = useState(0);
 
 
     const handleGroupPageChange = (newPage) => {
@@ -221,6 +222,16 @@ const NewOrders = () => {
     const toggleDetails = () => {
         setPersonalOrder(!personalOrder);
     };
+
+
+
+    const [combineOrder, setCombineOrder] = useState([]);
+
+    const ShowCombineOrder = () => {
+        setCombineOrder(currentOrders);
+        setModalFlag(2);
+        onOpen();
+    }
 
 
 
@@ -335,6 +346,10 @@ const NewOrders = () => {
 
 
 
+    console.log(combineOrder, "combineOrdercombineOrdercombineOrdercombineOrder")
+
+
+
     return (
         <>
             <Header />
@@ -380,8 +395,8 @@ const NewOrders = () => {
                                         Group New Orders
                                     </Text>
                                 }
-                                <Button onClick={toggleDetails} colorScheme="blue" mt={6} ml={10} >
-                                    {personalOrder ? "Group New Orders" : "New Orders"}
+                                <Button onClick={ShowCombineOrder} colorScheme="blue" mt={6} ml={10} >
+                                    Combine Order
                                 </Button>
                             </Box>
                             {/* <Text fontSize="50px" align={'center'} mb={6} color={"black"}>
@@ -418,7 +433,7 @@ const NewOrders = () => {
                                                 {/* <Td color="black">{order?._id.slice(0, 10)}....</Td> */}
                                                 <Td color="black">{order.userName}</Td>
                                                 {/* <Td color="black">{order.items.join(', ')}</Td> */}
-                                                <Td color="black" onClick={() => { setSelectedOrder(order?.cartItems); onOpen(); }} _hover={{ cursor: "pointer" }}>{order.cartItems[0].name}...</Td>
+                                                <Td color="black" onClick={() => { setSelectedOrder(order?.cartItems); onOpen(); setModalFlag(1) }} _hover={{ cursor: "pointer" }}>{order.cartItems[0].name}...</Td>
                                                 <Td color="black">{order.amount}</Td>
                                                 <Td color="red"><Box border={"1px solid pale"} borderRadius={"10px"} w={"58%"} p={3} color="black" bg="green.300">{order.orderStatus}</Box></Td>
                                                 <Td>
@@ -559,30 +574,62 @@ const NewOrders = () => {
                 <ModalContent>
                     <ModalHeader align={"center"} fontSize={"40px"} color="white" fontWeight="bold" >{selectedOrder?.hotelName}</ModalHeader>
                     <ModalCloseButton />
-                    <ModalBody>
-                        <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' ml={10} color="white">
-                            <Table variant="striped">
-                                <Thead >
-                                    <Tr >
 
-                                        <Th color="black">Item Name</Th>
-                                        <Th color="black">Price</Th>
-                                        <Th color="black">Quantity</Th>
+                    {
+                        modalflag == 1 &&
+                        <ModalBody>
+                            <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' ml={10} color="white">
+                                <Table variant="striped">
+                                    <Thead >
+                                        <Tr >
 
-                                    </Tr>
-                                </Thead>
-                                <Tbody >
-                                    {selectedOrder.map((item) => (
-                                        <Tr key={item._id}>
-                                            <Td color="black">{item.name}</Td>
-                                            <Td color="black">{item.price}</Td>
-                                            <Td color="black">{item.quantity}</Td>
+                                            <Th color="black">Item Name</Th>
+                                            <Th color="black">Price</Th>
+                                            <Th color="black">Quantity</Th>
+
                                         </Tr>
-                                    ))}
-                                </Tbody>
-                            </Table>
-                        </Box>
-                    </ModalBody>
+                                    </Thead>
+                                    <Tbody >
+                                        {selectedOrder.map((item) => (
+                                            <Tr key={item._id}>
+                                                <Td color="black">{item.name}</Td>
+                                                <Td color="black">{item.price}</Td>
+                                                <Td color="black">{item.quantity}</Td>
+                                            </Tr>
+                                        ))}
+                                    </Tbody>
+                                </Table>
+                            </Box>
+                        </ModalBody>
+                    }
+
+                    {
+                        modalflag == 2 &&
+                        <ModalBody>
+                            <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' ml={10} color="white">
+                                <Table variant="striped">
+                                    <Thead >
+                                        <Tr >
+
+                                            <Th color="black">Item Name</Th>
+                                            <Th color="black">Price</Th>
+                                            <Th color="black">Quantity</Th>
+
+                                        </Tr>
+                                    </Thead>
+                                    <Tbody >
+                                        {combineOrder.map((item) => (
+                                            <Tr key={item._id}>
+                                                <Td color="black">Maggie</Td>
+                                                <Td color="black">25</Td>
+                                                <Td color="black">6</Td>
+                                            </Tr>
+                                        ))}
+                                    </Tbody>
+                                </Table>
+                            </Box>
+                        </ModalBody>
+                    }
                     <ModalFooter>
                         <Button colorScheme="blue" mr={3} onClick={() => { onClose(); setSelectedOrder([]) }}>
                             Close

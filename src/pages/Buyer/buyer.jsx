@@ -26,7 +26,7 @@ import {
     IconButton,
     Image
 } from '@chakra-ui/react'
-import Header from "../../Header/header";
+import Header from "../../Header/Header";
 import Footer from "../../Footer/footer";
 
 const Buyer = () => {

@@ -12,7 +12,7 @@ import {
     Tr,
 } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
-import Header from '../../Header/header';
+import Header from "../../Header/Header";
 import Footer from '../../Footer/footer';
 import Pagination from '../Pagination/pagination';
 import { FaTimes } from 'react-icons/fa';

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {
     Select, Flex, Box, Heading, Input, Textarea, NumberInput, NumberInputField, Button, VStack, FormControl, FormLabel, InputGroup, InputRightElement, useColorModeValue, Stack, Text, Link
 } from '@chakra-ui/react'
-import Header from "../../Header/header";
+import Header from "../../Header/Header";
 import Footer from "../../Footer/footer";
 import FoodBackgroundImage from '../../img2.jpg';
 const AddItem = () => {

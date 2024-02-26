@@ -10,7 +10,7 @@ import {
     Image,
     Center
 } from '@chakra-ui/react';
-import Header from '../../Header/header';
+import Header from "../../Header/Header";
 import Footer from '../../Footer/footer';
 import { useNavigate, useParams } from 'react-router-dom';
 import StatusImage from "../../StatusImage.png"

@@ -23,7 +23,7 @@ import {
     Spinner
 } from '@chakra-ui/react';
 
-import Header from '../../Header/header';
+import Header from "../../Header/Header";
 import Footer from '../../Footer/footer';
 import Pagination from '../Pagination/pagination';
 import axios from "axios"

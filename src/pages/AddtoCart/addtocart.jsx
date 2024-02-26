@@ -22,7 +22,7 @@ import {
 } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import Footer from "../../Footer/footer";
-import Header from "../../Header/header";
+import Header from "../../Header/Header";
 import food from "../../food.png"
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";

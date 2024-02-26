@@ -10,7 +10,7 @@ import {
     FormLabel,
     useToast,
 } from '@chakra-ui/react';
-import Header from '../Header/header';
+import Header from "../Header/Header";
 import Footer from '../Footer/footer';
 import { useNavigate } from 'react-router-dom';
 import FoodBackgroundImage from '../img2.jpg';

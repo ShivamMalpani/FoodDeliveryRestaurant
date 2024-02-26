@@ -31,7 +31,7 @@ import {
 import { StarIcon } from '@chakra-ui/icons';
 import { SearchIcon } from "@chakra-ui/icons";
 import { useToast } from "@chakra-ui/react";
-import Header from '../../Header/header';
+import Header from "../../Header/Header";
 import Footer from '../../Footer/footer';
 import food from '../../food.png';
 import axios from "axios"

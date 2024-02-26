@@ -14,7 +14,7 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react'
 import Footer from "../Footer/footer";
-import Header from "../Header/header";
+import Header from "../Header/Header";
 import FoodBackgroundImage from '../img2.jpg';
 
 const ResetPassword = () => {

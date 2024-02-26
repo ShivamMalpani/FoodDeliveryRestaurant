@@ -16,7 +16,7 @@ import {
 import Congrats from "../Congrats.png"
 // import FoodBackgroundImage from '../foodbackgroundimage.jpg';
 import FoodBackgroundImage from '../img2.jpg'
-import Header from "../Header/header";
+import Header from "../Header/Header";
 import Footer from "../Footer/footer";
 
 const VerifyEmailOnAccountCreation = () => {

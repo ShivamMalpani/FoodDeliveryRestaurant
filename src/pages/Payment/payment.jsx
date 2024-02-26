@@ -15,7 +15,7 @@ import {
     Text
 } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
-import Header from '../../Header/header';
+import Header from "../../Header/Header";
 import Footer from '../../Footer/footer';
 import image from "../../creditcard.png"
 

@@ -8,7 +8,7 @@ import {
     Button,
     SimpleGrid
 } from '@chakra-ui/react';
-import Header from '../Header/header';
+import Header from "../Header/Header";
 import Footer from '../Footer/footer';
 import Pagination from '../pages/Pagination/pagination';
 import { useNavigate } from 'react-router-dom';
